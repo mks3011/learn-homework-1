@@ -20,7 +20,7 @@ def main():
     В ней надо заменить pass на ваш код
     """
 
-    def what_to_do(user_age, years="лет"):
+    def what_to_do(user_age):
       if user_age <= 7:
          return("Иди в детский сад")
       elif user_age <= 17:

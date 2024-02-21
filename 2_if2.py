@@ -20,7 +20,11 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
-    
+    def dfrnt(a, b):
+        if (isinstance(a and b, str)):
+            print("0")
+        
+    dfrnt("5", "5")
+
 if __name__ == "__main__":
     main()

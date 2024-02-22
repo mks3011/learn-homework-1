@@ -49,7 +49,7 @@ def main():
         all_items_sum += a
         avg_items_sum += b
         
-    print(f"суммарное количество продаж всех товаров: {all_items_sum}")    
+    print(f"Суммарное количество продаж всех товаров: {all_items_sum}")    
     print(f"Среднее количество продаж всех товаров: {int(avg_items_sum)}")    
             
         

@@ -34,23 +34,21 @@ def main():
             avg_sld = ttl_sld / len(itms_sld)
         return(ttl_sld, avg_sld)
     
-    for one_phone in phones:
-        phone_ttl = count_sum(one_phone['items_sold'])
-        a,b = phone_ttl
-        print(f'Cуммарное количество продаж модели {one_phone["product"]}: {a}')
-        print(f'Среднее количество продаж модели {one_phone["product"]}: {int(b)}')
-
+    
     all_items_sum = 0
     avg_items_sum = 0
 
     for one_phone in phones:
         phone_ttl = count_sum(one_phone['items_sold'])
-        a,b = phone_ttl
-        all_items_sum += a
-        avg_items_sum += b
-        
+        t, a = phone_ttl
+        all_items_sum += t
+        avg_items_sum += a
+    
+        print(f'Cуммарное количество продаж модели {one_phone["product"]}: {t}')
+        print(f'Среднее количество продаж модели {one_phone["product"]}: {int(a)}')
     print(f"Суммарное количество продаж всех товаров: {all_items_sum}")    
-    print(f"Среднее количество продаж всех товаров: {int(avg_items_sum)}")    
+    print(f"Среднее количество продаж всех товаров: {int(avg_items_sum)}")
+
             
         
 if __name__ == "__main__":

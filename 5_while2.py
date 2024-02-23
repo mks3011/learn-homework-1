@@ -8,20 +8,27 @@
   {"Как дела": "Хорошо!", "Что делаешь?": "Программирую"} и так далее
 * Напишите функцию ask_user() которая с помощью функции input()
   просит пользователя ввести вопрос, а затем, если вопрос есть
-  в словаре, программа давала ему соотвествующий ответ. Например:
+  в словаре, программа давала ему соответсвующий ответ. Например:
 
     Пользователь: Что делаешь?
     Программа: Программирую
-    
+
 """
 
-questions_and_answers = {}
+questions_and_answers = {"Как дела?": "Хорошо!", "Что делаешь?": "Программирую", "Что изучаешь?": "Циклы"}
 
-def ask_user(answers_dict):
+def ask_user(dict):
     """
     Замените pass на ваш код
     """
-    pass
-    
+    while True:
+        ask = input("Спрашивай: ").capitalize()
+        if ask in questions_and_answers.keys():
+            print(questions_and_answers[ask])
+        else:
+            print("Не знаю, пока")
+            break
+
+
 if __name__ == "__main__":
     ask_user(questions_and_answers)

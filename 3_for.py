@@ -16,40 +16,38 @@
 * Посчитать и вывести среднее количество продаж всех товаров
 """
 
-def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    phones = [
+
+phones = [
         {'product': 'iPhone 12', 'items_sold': [363, 500, 224, 358, 480, 476, 470, 216, 270, 388, 312, 186]},
         {'product': 'Xiaomi Mi11', 'items_sold': [317, 267, 290, 431, 211, 354, 276, 526, 141, 453, 510, 316]},
         {'product': 'Samsung Galaxy 21', 'items_sold': [343, 390, 238, 437, 214, 494, 441, 518, 212, 288, 272, 247]},
     ]
 
-    def count_sum(itms_sld):
-        ttl_sld = 0
-        avg_sld = 0
-        for sold in itms_sld:
-            ttl_sld += sold
-            avg_sld = ttl_sld / len(itms_sld)
-        return ttl_sld, avg_sld
 
-    all_items_sum = 0
-    avg_items_sum = 0
-
-    for one_phone in phones:
-        phone_ttl = count_sum(one_phone['items_sold'])
-        t, a = phone_ttl
-        all_items_sum += t
-        avg_items_sum += a
-
-        print(f'Cуммарное количество продаж модели {one_phone["product"]}: {t}')
-        print(f'Среднее количество продаж модели {one_phone["product"]}: {int(a)}')
-    print(f"Суммарное количество продаж всех товаров: {all_items_sum}")
-    print(f"Среднее количество продаж всех товаров: {int(avg_items_sum)}")
+def count_sum(items_sold):
+    """
+    Эта функция вызывается автоматически при запуске скрипта в консоли
+    В ней надо заменить pass на ваш код
+    """
+    total_sold = 0
+    average_sold = 0
+    for sold in items_sold:
+        total_sold += sold
+        average_sold = total_sold / len(items_sold)
+    return total_sold, average_sold
 
 
+all_phones_sold = 0
+avg_phones_sold = 0
 
-if __name__ == "__main__":
-    main()
+for one_phone in phones:
+    phone_ttl = count_sum(one_phone['items_sold'])
+    t, a = phone_ttl
+    all_phones_sold += t
+    avg_phones_sold += a
+
+    print(f'Суммарное количество продаж модели {one_phone["product"]}: {t}')
+    print(f'Среднее количество продаж модели {one_phone["product"]}: {a}')
+
+print(f"Суммарное количество продаж всех товаров: {all_phones_sold}")
+print(f"Среднее количество продаж всех товаров: {avg_phones_sold}")

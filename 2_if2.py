@@ -5,33 +5,35 @@
 Условный оператор: Сравнение строк
 
 * Написать функцию, которая принимает на вход две строки
-* Проверить, является ли то, что передано функции, строками. 
+* Проверить, является ли то, что передано функции, строками.
   Если нет - вернуть 0
 * Если строки одинаковые, вернуть 1
 * Если строки разные и первая длиннее, вернуть 2
 * Если строки разные и вторая строка 'learn', возвращает 3
-* Вызвать функцию несколько раз, передавая ей разные праметры 
+* Вызвать функцию несколько раз, передавая ей разные праметры
   и выводя на экран результаты
 
 """
 
-def main():
+
+def main(string1, string2):
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    def diff(a, b):
-        #if (not isinstance(a and b, str)):
-        if (type(a and b)!=str):
-            print("0")
-        if a == b:
-            print("1")
-        if a != b and len(a) > len(b):
-            print("2")
-        if a not in b and b == "learn":
-            print("3")        
-        
-    diff("learn2", "learn")
+
+    if not isinstance(string1 and string2, str):
+        return "0"
+    elif string1 == string2:
+        return "1"
+    elif len(string1) > len(string2):
+        return "2"
+    elif string1 != string2 and string2 == "learn":
+        return "3"
+
 
 if __name__ == "__main__":
-    main()
+    print(main("six", 6))
+    print(main("5", "5"))
+    print(main("six", "6"))
+    print(main("six", "learn"))

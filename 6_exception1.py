@@ -15,13 +15,20 @@ def hello_user():
     """
     Замените pass на ваш код
     """
+    #while True:
+    #    try:
+    #        print('Как дела?')
+    #    except KeyboardInterrupt:
+    #        print('Пока')
+    #        break
+
     while True:
         try:
-            print('Как дела?')
+            input('Как дела?')
+
         except KeyboardInterrupt:
             print('Пока')
             break
-
 
 if __name__ == "__main__":
     hello_user()

@@ -10,6 +10,7 @@
 
 """
 
+
 def hello_user():
     """
     Замените pass на ваш код
@@ -17,7 +18,6 @@ def hello_user():
     while True:
         try:
             print('Как дела?')
-
         except KeyboardInterrupt:
             print('Пока')
             break

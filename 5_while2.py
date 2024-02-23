@@ -27,7 +27,6 @@ def ask_user(dict):
             print(questions_and_answers[ask])
         else:
             print("Не знаю, пока")
-            break
 
 
 if __name__ == "__main__":

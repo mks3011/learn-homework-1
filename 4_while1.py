@@ -14,18 +14,27 @@ def hello_user():
     """
     Замените pass на ваш код
     """
-    user_say = input('Как дела?')
+    """
+    # v1
+    user_say = input('Как дела?').capitalize()
     while user_say != 'Хорошо':
         user_say = input('Как дела?')
 
-    """
+
     # v2
     key_word = 'Хорошо'
     while True:
-        user_say = input('Как дела?')
+        user_say = input('Как дела?').capitalize()
         if key_word == user_say:
             break
     """
+    # v3
+    while True:
+        user_say = input('Как дела?').capitalize()
+        if user_say == 'Хорошо':
+            break
+
+
 
 if __name__ == "__main__":
     hello_user()

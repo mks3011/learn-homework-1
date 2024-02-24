@@ -37,16 +37,19 @@ def count_sum(items_sold):
 
 
 all_phones_sold = 0
+sum_avg_sold = 0
 avg_phones_sold = 0
 
 for one_phone in phones:
     sales = count_sum(one_phone['items_sold'])
     phone_sold, avg_phone_sold = sales
     all_phones_sold += phone_sold
-    avg_phones_sold += avg_phone_sold
+    sum_avg_sold += avg_phone_sold
+    avg_phones_sold += avg_phone_sold / len(phones)
 
     print(f'Суммарное количество продаж модели {one_phone["product"]}: {phone_sold}')
     print(f'Среднее количество продаж модели {one_phone["product"]}: {avg_phone_sold}')
 
 print(f"Суммарное количество продаж всех товаров: {all_phones_sold}")
+print(f"Сумма средних продаж всех товаров: {sum_avg_sold}")
 print(f"Среднее количество продаж всех товаров: {avg_phones_sold}")

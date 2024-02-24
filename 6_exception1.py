@@ -30,5 +30,6 @@ def hello_user():
             print('Пока')
             break
 
+
 if __name__ == "__main__":
     hello_user()
